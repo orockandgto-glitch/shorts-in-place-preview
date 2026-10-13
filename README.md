@@ -24,13 +24,13 @@ Include your Edge version, the affected page type (home or watch), expected beha
 
 ## Free use and optional support
 
-All features are free regardless of whether you donate. An optional developer support page is being prepared. Support does not purchase extra features or guarantee ongoing updates.
+All features are free regardless of whether you donate. If you find the project useful, you can [buy Lenged a coffee](https://buymeacoffee.com/lenged). Support does not purchase extra features or guarantee ongoing updates.
 
 ## Compatibility and privacy
 
 The extension depends on YouTube's internal native player implementation, which may change without notice. Ad playback, age-restricted videos, and regional restrictions have not yet been fully tested. YouTube playback may affect watch history or recommendations according to your account settings.
 
-The extension has no developer analytics or developer server. It processes thumbnail links, video IDs, pointer events, and playback state within the current browser page. YouTube still handles its own playback requests and data. A detailed privacy policy will be published before the store release.
+The extension has no developer analytics or developer server. It processes thumbnail links, video IDs, pointer events, and playback state within the current browser page. YouTube still handles its own playback requests and data. Read the detailed [privacy policy](PRIVACY.md).
 
 This project is independent and is not affiliated with YouTube, Google, or Microsoft.
 
@@ -41,3 +41,6 @@ This project is independent and is not affiliated with YouTube, Google, or Micro
 Lenged가 개발하는 무료 Edge 확장프로그램입니다. 홈 Shorts 또는 시청 페이지 추천 썸네일에 마우스를 약 0.4초 올리면 해당 썸네일 안에서 영상이 무음 재생됩니다. 마우스를 떼면 썸네일로 돌아가며, 클릭은 기존 영상 페이지로 이동합니다.
 
 현재 공개 배포를 준비 중이며 아직 스토어에 출시하지 않았습니다. 오류 및 개인정보 관련 문의는 위 Issues에서 접수합니다. 모든 기능은 후원 여부와 관계없이 무료입니다. YouTube 내부 구조 변경으로 작동이 중단될 수 있고, 미리보기 재생이 시청 기록이나 추천에 영향을 줄 수 있습니다.
+
+
+선택적으로 [Lenged 개발 후원](https://buymeacoffee.com/lenged)에 참여할 수 있습니다. [개인정보처리방침](PRIVACY.md)을 확인하세요.
