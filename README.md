@@ -1,8 +1,16 @@
 # Preview & Shorts Controls for YouTube
 
+![Preview more. Click less. Free thumbnail preview controls for Chrome and Edge. Feature illustration.](media/launch-en-1280x640.png)
+
 Free browser extension by **Lenged**. Preview videos in place, control their sound and playback position, and keep Shorts information out of the way.
 
 [Download v0.5.2](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.5.2.zip) · [Release history](https://github.com/orockandgto-glitch/shorts-in-place-preview/releases) · [Report a bug](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [Buy Lenged a coffee](https://buymeacoffee.com/lenged)
+
+**Preview more. Click less.** Hover over a home Shorts thumbnail to keep watching in place. Turn preview sound on when you want it. On a watch page, jump to a different moment in a related-video preview, then return to your main video with its audio restored.
+
+All features are free. No account for this extension and no paid feature unlocks. Current distribution is a GitHub ZIP with manual installation; Chrome Web Store availability has not been announced.
+
+[How to use it / 사용 안내](USER-GUIDE.md) · [Official updates on X](https://x.com/LengedTools)
 
 ## Features
 
@@ -55,6 +63,8 @@ Independent project; not affiliated with YouTube, Google, Microsoft, Naver or Ap
 ---
 
 ## 한국어
+
+**클릭하기 전에, 제대로 미리보기.** [한국어 소개 이미지](media/launch-ko-1280x640.png)
 
 **Lenged가 만드는 무료 확장프로그램입니다.** 홈 Shorts와 우측 추천 영상을 썸네일 안에서 계속 보고, 미리보기 소리·음량·재생 위치를 조절할 수 있습니다. Shorts 시청 화면의 제목·채널 정보 자동 숨김도 제공합니다. 모든 기능은 후원 여부와 관계없이 무료입니다.
 
