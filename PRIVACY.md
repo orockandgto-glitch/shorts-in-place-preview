@@ -1,12 +1,16 @@
-# Privacy policy — Shorts In-place Preview
+# Privacy policy — Preview & Shorts Controls for YouTube
 
-Prepared: October 13, 2026  
+Prepared: October 14, 2026  
 Developer: Lenged  
-Scope: 0.3.0 submission preparation build
+Scope: integrated version 0.5.2
 
 ## Processing in your browser
 
 The extension reads YouTube card structure, thumbnail links, video IDs, hover events, and playback/visibility state on https://www.youtube.com/ to implement previews. It adds temporary elements, state attributes and display styles to the current page. Operational state stays in the browser document and memory and is cleaned up when playback stops, navigation occurs or the document closes. It does not create a viewing-history database or store card data on a developer server.
+
+## Local preferences
+
+Feature switches, hover delay and preview volume are saved in chrome.storage.local on the device. They are not transmitted to the developer and are not synced by this extension. Uninstalling the extension removes its extension storage. The Shorts information feature changes page-local metadata visibility and does not collect channel names or titles for developer use.
 
 ## Information the developer does not collect
 
@@ -18,7 +22,7 @@ Previews use the native player already provided by the current YouTube page. Tha
 
 ## Permissions
 
-YouTube site access supports page-local card and player functionality. The scripting permission inserts a fixed, packaged CSS file into the sending YouTube document when a conflicting style hides an actively playing native home-page preview. The extension does not read other websites.
+YouTube site access supports page-local card and player functionality. The scripting permission inserts a fixed, packaged CSS file into the sending YouTube document when a conflicting style hides an actively playing native home-page preview. The storage permission saves local preferences. The extension does not read other websites.
 
 ## Optional external developer support
 
@@ -33,7 +37,7 @@ Developer support is provided through [Buy Me a Coffee](https://buymeacoffee.com
 
 ---
 
-# 개인정보처리방침 — Shorts In-place Preview
+# 개인정보처리방침 — Preview & Shorts Controls for YouTube
 
 작성일: 2026년 10월 13일  
 개발자: Lenged  
@@ -64,16 +68,17 @@ YouTube 사이트 접근 권한은 카드와 플레이어의 페이지 내 동�
 개인정보 관련 문의는 [GitHub Issues](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues)를 이용해주세요. 문의 내용은 공개되므로 계정·결제·시청 정보 등 비공개 정보를 포함하지 마세요. 비공개 상담이 필요한 경우 민감한 내용 없이 별도의 연락 경로를 요청할 수 있습니다. 정책 변경 시 이 문서의 날짜와 내용을 갱신합니다. 확장을 끄거나 삭제하면 이후의 페이지 내 동작을 중지할 수 있습니다.
 
 개발 후원은 [Buy Me a Coffee](https://buymeacoffee.com/lenged)에서 진행합니다. 방문·결제 전 해당 서비스의 [개인정보 정책](https://buymeacoffee.com/privacy-policy)을 확인할 수 있습니다. 이 정책을 호스팅하는 GitHub는 사이트 접속 및 문의 내용을 자체 [개인정보 정책](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)에 따라 처리합니다.
----
-# Integrated version 0.5.2 update — Preview & Shorts Controls for YouTube
-Updated: October 15, 2026. This update extends the policy above to integrated version 0.5.2 under its new product name, Preview & Shorts Controls for YouTube.
-## Local preferences and storage permission
-Feature switches, hover delay and preview volume are saved in chrome.storage.local on the device. They are not transmitted to the developer and are not synced by this extension. Uninstalling the extension removes its extension storage. The Shorts information feature changes page-local title/channel visibility and does not collect channel names or titles for developer use.
+
+
+## 통합판 0.5.2 추가 안내
+
+기능별 스위치, 미리보기 대기 시간, 음량은 기기의 chrome.storage.local에 저장되며 개발자에게 전송되지 않습니다. 확장을 삭제하면 확장 저장소도 제거됩니다. Shorts 정보 숨김 기능은 현재 페이지의 표시만 변경합니다. 개인정보 외부 수집·전송 기능은 추가하지 않았습니다.
+
+
 ## Recommendation preview controls
-Current time, duration, preview audio state, and the main video’s previous mute and volume state are processed temporarily in the current page to implement seeking and audio restoration. The developer receives none of this information. Main audio restoration state is not saved to extension storage. YouTube playback requests and optional external support remain subject to the disclosures above. No developer telemetry, analytics or external data collection has been added.
-# 통합판 0.5.2 추가 안내 — Preview & Shorts Controls for YouTube
-갱신일: 2026년 10월 15일. 위 정책의 적용 범위를 새 제품명 Preview & Shorts Controls for YouTube의 통합판 0.5.2로 확장합니다.
-## 로컬 설정 및 storage 권한
-기능별 스위치, 미리보기 대기 시간, 음량은 기기의 chrome.storage.local에 저장되며 개발자에게 전송되거나 확장에 의해 동기화되지 않습니다. 확장을 삭제하면 확장 저장소도 제거됩니다. Shorts 정보 숨김 기능은 현재 페이지의 제목·채널 표시만 변경하며 개발자 용도로 제목·채널명을 수집하지 않습니다.
+
+Current time, duration, preview audio state, and the main video’s previous mute and volume state are processed temporarily in the current page to implement seeking and audio restoration. The developer receives none of this information. Main audio restoration state is not saved to extension storage.
+
 ## 우측 추천 미리보기 제어
-재생 위치, 전체 길이, 미리보기 소리 상태 및 본영상의 이전 음소거·음량은 탐색과 소리 복원을 위해 현재 페이지 메모리에서 일시 처리합니다. 개발자에게 전송하지 않으며 본영상 복원 상태는 확장 저장소에 보관하지 않습니다. YouTube 재생 요청 및 선택적 외부 후원에는 위 안내가 계속 적용됩니다. 개발자 원격 분석, 사용 통계 또는 개인정보 외부 수집·전송 기능은 추가하지 않았습니다.
+
+재생 위치, 전체 길이, 미리보기 소리 상태 및 본영상의 이전 음소거·음량은 탐색과 소리 복원을 위해 현재 페이지 메모리에서 일시 처리합니다. 개발자에게 전송하지 않으며 본영상 복원 상태는 확장 저장소에 보관하지 않습니다.
