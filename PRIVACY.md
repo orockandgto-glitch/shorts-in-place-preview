@@ -1,6 +1,6 @@
 # Privacy policy — Preview & Shorts Controls for YouTube
 
-Prepared: October 14, 2026  
+Updated: October 15, 2026  
 Developer: Lenged  
 Scope: integrated version 0.5.2
 
@@ -39,9 +39,9 @@ Developer support is provided through [Buy Me a Coffee](https://buymeacoffee.com
 
 # 개인정보처리방침 — Preview & Shorts Controls for YouTube
 
-작성일: 2026년 10월 13일  
+작성일: 2026년 10월 15일  
 개발자: Lenged  
-적용 대상: 0.3.0 등록 준비 빌드
+적용 대상: 통합판 0.5.2
 
 ## 브라우저 내 처리
 
