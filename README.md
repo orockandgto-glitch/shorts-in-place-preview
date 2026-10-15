@@ -18,17 +18,18 @@ Free browser extension by **Lenged**. Preview videos in place, control their sou
 | Browser | Status |
 | --- | --- |
 | Microsoft Edge desktop | v0.5.2 tested in actual use |
-| Chrome / Whale desktop | Chromium compatibility is expected, but not yet tested or certified |
+| Google Chrome desktop | v0.5.2 manually tested by the author on 2026-10-15; all features reported working |
+| Whale desktop | Chromium compatibility is expected, but not yet tested |
 | Firefox / Safari | Not supported by this package; porting and testing are required |
 
 The extension depends on YouTube's internal player and page structure, which can change without notice. Ads have been observed during previews, but ads, live and restricted content are not comprehensively tested. Preview playback may affect YouTube watch history or recommendations. This is not an ad blocker.
 
 The Edge store update is being prepared; a public store listing has not been verified. GitHub download availability does not imply store approval.
 
-## Install manually on Edge
+## Install manually on Edge or Chrome
 
 1. Download the **v0.5.2 ZIP** above and extract it into a permanent folder. Select the folder that directly contains `manifest.json` when loading.
-2. Open `edge://extensions` and enable **Developer mode**.
+2. Open `edge://extensions` (Edge) or `chrome://extensions` (Chrome) and enable **Developer mode**.
 3. Choose **Load unpacked** and select that extracted folder.
 4. Disable older separate copies of Shorts In-place Preview, Preview Volume Control and Shorts Clear View to avoid duplicate controls.
 5. Refresh YouTube. Open this extension's toolbar icon for options, instructions and support.
@@ -67,7 +68,9 @@ Independent project; not affiliated with YouTube, Google, Microsoft, Naver or Ap
 
 소스를 통째로 받았다면 저장소 최상위가 아닌 **extension 폴더**를 선택하세요. GitHub 수동 설치는 자동 업데이트되지 않습니다. 새 ZIP을 설치 폴더에 반영한 뒤 확장과 YouTube를 새로고침하세요.
 
-현재 **Edge 실제 사용 확인 완료**, Chrome·웨일은 호환 예상 단계이며 실제 테스트 전입니다. Firefox·Safari는 별도 이식이 필요합니다. YouTube 변경으로 작동이 중단될 수 있고 모든 광고·라이브·제한 콘텐츠를 검증한 것은 아닙니다.
+현재 **Edge 실제 사용 확인 완료**, **Chrome은 2026-10-15 개발자 직접 사용 테스트에서 전체 기능 정상 동작을 확인**했습니다. Chrome 페이지에서도 0.5.2 실행·준비 완료 상태와 Shorts 카드 10개 인식을 확인했습니다. 웨일은 호환 예상 단계이며 실제 테스트 전입니다. Firefox·Safari는 별도 이식이 필요합니다. YouTube 변경으로 작동이 중단될 수 있고 모든 광고·라이브·제한 콘텐츠를 검증한 것은 아닙니다.
+
+Chrome에서는 `chrome://extensions`에서 개발자 모드를 켜고 같은 **extension 폴더**를 압축 해제된 확장으로 로드하면 됩니다. Chrome 웹 스토어 등록은 별도이며 현재 GitHub 수동 설치를 제공합니다.
 
 [버그 신고](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [개인정보처리방침](PRIVACY.md) · [선택적 개발 후원](https://buymeacoffee.com/lenged)
 
