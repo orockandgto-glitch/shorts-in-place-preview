@@ -1,0 +1,5 @@
+/* Hide only marked metadata; no extra controls or player changes. */
+html[data-scv-page] [data-scv-metadata] { opacity: 0 !important; }
+html[data-scv-page] [data-scv-card]:has([data-scv-video]:hover) [data-scv-metadata],
+html[data-scv-page] [data-scv-metadata]:hover,
+html[data-scv-page] [data-scv-metadata]:focus-within { opacity: 1 !important; }

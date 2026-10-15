@@ -1,0 +1,6 @@
+/* USER origin can override cosmetic USER styles. Only a marked original
+   home preview or an extension-owned playing video is affected. */
+html[data-sip-version] ytd-video-preview #inline-preview-player video[data-sip-native-visible],
+html[data-sip-version] .sip-surface[data-sip-playing] video.video-stream.html5-main-video {
+  display: block !important;
+}

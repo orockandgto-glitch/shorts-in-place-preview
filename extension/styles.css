@@ -1,0 +1,61 @@
+/* Every rule is scoped to extension-owned nodes. */
+[data-sip-anchor] { position: relative !important; }
+.sip-surface {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: inherit;
+  pointer-events: none !important;
+  z-index: 2;
+  opacity: 0;
+}
+.sip-surface[data-sip-playing] { opacity: 1; background: #000; }
+.sip-surface[data-sip-playing] [data-sip-player-part] {
+  opacity: 1 !important;
+}
+.sip-surface, .sip-surface * { pointer-events: none !important; }
+.sip-surface [data-sip-player-part],
+.sip-surface > ytd-video-preview,
+.sip-surface #video-preview-container,
+.sip-surface #media-container,
+.sip-surface #media-container-link,
+.sip-surface #player-container-wrapper,
+.sip-surface #player-container,
+.sip-surface ytd-player,
+.sip-surface ytd-player > #container,
+.sip-surface .html5-video-player,
+.sip-surface .html5-video-container {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+.sip-surface video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  transform: none !important;
+}
+.sip-surface .ytp-chrome-top,
+.sip-surface .ytp-chrome-bottom,
+.sip-surface .ytp-gradient-top,
+.sip-surface .ytp-gradient-bottom,
+.sip-surface .ytp-tooltip,
+.sip-surface #overlays,
+.sip-surface #player-controls,
+.sip-surface #metadata { display: none !important; }
