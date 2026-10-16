@@ -1,5 +1,17 @@
 # Preview & Shorts Controls for YouTube
 
+**Try it free / 무료로 써보기 — Chrome & Edge desktop**
+
+[**Download extension ZIP · 설치 파일 받기 (v0.5.2)**](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.5.2.zip) · [19-second real demo / 실제 시연](https://x.com/LengedTools/status/2110974712088273407)
+
+1. Download the ZIP and extract it. / ZIP을 받고 압축을 풉니다.
+2. Open `chrome://extensions` or `edge://extensions` → **Developer mode / 개발자 모드** → **Load unpacked / 압축 해제된 확장 로드**.
+3. Select the extracted folder containing `manifest.json`, refresh YouTube, and hover over a home Shorts card. / `manifest.json`이 바로 있는 폴더 선택 → YouTube 새로고침 → 홈 Shorts에 마우스를 올리세요.
+
+**Manual installation is required.** All features are free; donations are optional. / 현재 수동 설치가 필요하며, 모든 기능은 후원 없이 무료입니다. [Need help installing? / 설치가 막혔나요?](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)
+
+
+
 **Languages / 言語 / 语言:** English · 한국어 · [日本語](README.ja.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
 ![Preview more. Click less. Free thumbnail preview controls for Chrome and Edge. Feature illustration.](media/launch-en-1280x640.png)
