@@ -1,5 +1,7 @@
 # Preview & Shorts Controls for YouTube
 
+**Languages / 言語 / 语言:** English · 한국어 · [日本語](README.ja.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
+
 ![Preview more. Click less. Free thumbnail preview controls for Chrome and Edge. Feature illustration.](media/launch-en-1280x640.png)
 
 Free browser extension by **Lenged**. Preview videos in place, control their sound and playback position, and keep Shorts information out of the way.
