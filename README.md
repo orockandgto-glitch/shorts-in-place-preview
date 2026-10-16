@@ -14,7 +14,7 @@ All features are free. No account for this extension and no paid feature unlocks
 
 ## 26-second feature animation
 
-[Watch on X](https://x.com/LengedTools/status/2110900075509764377) · [Instagram Reel](https://www.instagram.com/lengedtools/reel/DeiUA5tO9gK/) · [Threads](https://www.threads.com/@lengedtools/post/DeiULq1j_K0) · [TikTok](https://www.tiktok.com/@lengedtools/video/7697065205393607944)
+[YouTube Shorts](https://www.youtube.com/shorts/KyXMzDXuKw8) · [Watch on X](https://x.com/LengedTools/status/2110900075509764377) · [Instagram Reel](https://www.instagram.com/lengedtools/reel/DeiUA5tO9gK/) · [Threads](https://www.threads.com/@lengedtools/post/DeiULq1j_K0) · [TikTok](https://www.tiktok.com/@lengedtools/video/7697065205393607944)
 
 This short animation illustrates hover playback, preview volume, recommendation seeking and optional Shorts information hiding. It uses simulated UI and original sample visuals, not a screen recording. 기능 시연 애니메이션이며 실제 화면 녹화가 아닙니다.
 
@@ -91,4 +91,5 @@ Chrome에서는 `chrome://extensions`에서 개발자 모드를 켜고 같은 **
 [버그 신고](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [개인정보처리방침](PRIVACY.md) · [선택적 개발 후원](https://buymeacoffee.com/lenged)
 
 소스는 확인할 수 있도록 공개했으며 재사용·재배포를 위한 오픈소스 라이선스는 아직 정하지 않았습니다. 후원은 추가 기능 구매나 지속적 업데이트 보장이 아닙니다.
+
 
