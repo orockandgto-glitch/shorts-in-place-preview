@@ -12,6 +12,12 @@ All features are free. No account for this extension and no paid feature unlocks
 
 [How to use it / 사용 안내](USER-GUIDE.md) · [Official updates on X](https://x.com/LengedTools)
 
+## Start here / 처음 오셨나요?
+
+**[Install on Chrome or Edge](#install-manually-on-edge-or-chrome)** · **[Actual Edge capture + setup video](https://x.com/LengedTools/status/2110974712088273407)** · **[Share first-use feedback / 사용 후기](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)**
+
+The 19-second video includes actual home Shorts preview footage and text installation instructions. The pinned feedback thread asks about setup clarity and control size. 모든 기능은 무료입니다. 설치가 막힌 곳이나 조절기 사용감을 알려주세요.
+
 ## 26-second feature animation
 
 [YouTube Shorts](https://www.youtube.com/shorts/KyXMzDXuKw8) · [Watch on X](https://x.com/LengedTools/status/2110900075509764377) · [Instagram Reel](https://www.instagram.com/lengedtools/reel/DeiUA5tO9gK/) · [Threads](https://www.threads.com/@lengedtools/post/DeiULq1j_K0) · [TikTok](https://www.tiktok.com/@lengedtools/video/7697065205393607944)
