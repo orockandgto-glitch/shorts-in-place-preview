@@ -1,0 +1,41 @@
+# Preview & Shorts Controls for YouTube — 日本語ガイド
+
+Lengedが制作する、PC版Chrome・Microsoft Edge向けの無料拡張機能です。ホームのShortsをサムネイル内で見続けたり、プレビューの音量や再生位置を調整したりできます。全機能が無料で、寄付は任意です。
+
+[English / 한국어](https://github.com/orockandgto-glitch/shorts-in-place-preview) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
+
+## できること
+
+- ホームのShortsサムネイルに約0.4秒カーソルを置くと、同じ場所・サイズで動画を再生します。カーソルを外すと停止し、サムネイルに戻ります。同時に複数のShortsを再生しません。
+- 新しいプレビューはミュートで開始します。左上の小さな音量コントロールで、必要なときに音を出せます。
+- 動画視聴ページの関連動画プレビューでは、音量と現在時間・合計時間付きのシークバーを使えます。プレビューの音を出すとメイン動画を一時的にミュートし、カーソルを外すと元の音声状態に戻します。メイン動画の再生自体は続きます。
+- Shorts視聴画面のタイトル・チャンネル情報を自動で隠すオプションがあります。動画にカーソルを置くと表示され、外すと隠れます。
+- 各機能のオン・オフ、ホバー待ち時間、音量を設定できます。通常のホーム動画にはYouTube本来のプレビューを使い、クリック時の通常のページ移動も維持します。
+
+## 手動インストール（v0.5.2）
+
+1. [インストール用ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.5.2.zip)をダウンロードして、移動・削除しないフォルダーに展開します。
+2. Chromeは `chrome://extensions`、Edgeは `edge://extensions` を開き、デベロッパーモードを有効にします。
+3. 「パッケージ化されていない拡張機能を読み込む」を選び、`manifest.json` が直接入っているフォルダーを指定します。
+4. 古い個別版（Shorts In-place Preview / Preview Volume Control / Shorts Clear View）がある場合は無効にして、重複実行を避けます。
+5. YouTubeを再読み込みします。拡張機能のツールバーアイコンから設定・使用説明を開けます。
+
+GitHubの「Source code」ZIPを使う場合は、リポジトリ最上位ではなく `extension` フォルダーを指定してください。手動インストールはGitHubから自動更新されません。新しいZIPを同じインストール先に反映して拡張機能とYouTubeを再読み込みします。
+
+[実際のEdge画面とインストール手順の19秒動画](https://x.com/LengedTools/status/2110974712088273407)：実際のShortsプレビュー録画と、文字によるインストール案内を含みます。インストール画面そのものの録画ではありません。
+
+## 対応状況と注意点
+
+PC版Edgeで実際に使用し、Chromeは2026年10月15日に作者が手動テストして全機能の動作を確認しました。Firefox・Safariはこのパッケージでは未対応です。Whaleは未検証です。スマートフォン版YouTubeには対応しません。
+
+YouTube内部のプレーヤーとページ構造に依存します。YouTubeの変更や他の拡張機能によって動作しなくなることがあります。広告ブロッカーではありません。広告表示は確認していますが、広告・ライブ・制限付きコンテンツを網羅的には検証していません。プレビューがYouTubeの再生履歴やおすすめに影響する可能性があります。ストアでの公開承認は確認しておらず、現在の案内はGitHubによる手動インストールです。
+
+## フィードバック・プライバシー
+
+[初回利用の感想](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)では、インストールで困った場所やコントロールの大きさを教えてください。日本語でも構いません。再現可能な不具合は別の[Issue](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues)に、ブラウザー・拡張機能のバージョンと再現手順を記載してください。Issueは公開されるので、個人情報や非公開の履歴は含めないでください。
+
+開発者のサーバー・利用解析・再生履歴のアップロードは含まれません。設定は端末内に保存されます。YouTube自身の通信・データ処理は別です。[プライバシーポリシー](https://github.com/orockandgto-glitch/shorts-in-place-preview/blob/main/PRIVACY.md)
+
+[任意の開発支援](https://buymeacoffee.com/lenged)。寄付による機能制限の解除はなく、寄付は将来の更新を保証するものではありません。ソースは確認用に公開していますが、再利用・再配布のためのオープンソースライセンスは未選択です。
+
+YouTube・Google・Microsoftとは提携していない独立したプロジェクトです。日本語案内の作成・翻訳にはAIを使用しています。
