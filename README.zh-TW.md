@@ -6,15 +6,17 @@
 
 ## 功能
 
+- 音量支援點擊與拖曳。滑鼠靜止3秒後只隱藏控制項，移動時重新顯示，播放及聲音狀態維持。首頁Shorts新增目前/總時間與進度列，放開拖曳後跳轉，可於設定中單獨關閉。
+
 - 游標停留在首頁Shorts縮圖上約0.4秒，即在同一位置、相同大小播放實際影片。移開後停止並還原縮圖，不會同時播放多支Shorts。
 - 每個新預覽都以靜音開始，需要聲音時使用左上角的小型音量控制項。
 - 觀看一般影片時，右側推薦影片的預覽可調音量，並提供目前時間/總長度與進度列。開啟預覽聲音時，主影片暫時靜音；移開游標後還原先前的聲音狀態。主影片本身仍繼續播放。
 - 可選擇自動隱藏Shorts觀看畫面的標題與頻道資訊，游標進入影片時顯示，移開時隱藏。
 - 各項功能、停留等待時間及音量可在設定中調整。一般首頁影片使用YouTube原生預覽；點擊縮圖仍正常進入影片頁面。
 
-## 手動安裝v0.5.2
+## 手動安裝v0.6.0
 
-1. 下載[安裝ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.5.2.zip)，解壓縮至固定資料夾。
+1. 下載[安裝ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip)，解壓縮至固定資料夾。
 2. Chrome開啟 `chrome://extensions`；Edge開啟 `edge://extensions`，啟用「開發人員模式」。
 3. 選擇「載入未封裝項目」，指定直接包含 `manifest.json` 的資料夾。
 4. 如有舊版獨立擴充功能（Shorts In-place Preview、Preview Volume Control、Shorts Clear View），先停用以避免重複執行。
@@ -39,3 +41,6 @@ Edge電腦版已實際使用；作者於2026年10月15日手動測試Chrome並�
 [自願支持開發](https://buymeacoffee.com/lenged)。贊助不會解鎖額外功能，也不保證未來持續更新。程式碼供檢查，目前尚未選定允許再利用、再散布的開源授權。
 
 這是獨立專案，與YouTube、Google、Microsoft無隸屬或背書關係。中文說明使用AI協助翻譯與編輯。
+
+
+v0.6.0變更已於2026年10月18日在Edge確認。Chrome先前測試的是v0.5.2，新互動仍待另外複測。
