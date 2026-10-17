@@ -165,7 +165,7 @@
       videoPreviewData: [fullVideo(data, record)],
       isAutoplay: false, showPlayerControls: false, forceMutedVolume: true,
       forceCaptionsOff: true, centerCrop: false,
-      mouseleaveCallback: () => { if (active === s) stop(); },
+      mouseleaveCallback: () => { if (active === s && !document.documentElement.hasAttribute('data-pvc-dragging')) stop(); },
       onPlaybackResult: result => {
         if (active === s && result === 0) fail(s, 'native-preview-request-declined');
         if (active === s && result === 1) fail(s, 'native-playback-failed');
@@ -407,6 +407,7 @@
   }, { capture: true });
   listen(document, 'pointerover', enter, { capture: true, passive: true });
   listen(document, 'pointerout', leave, { capture: true, passive: true });
+  listen(document, 'pvc-preview-exit', stop);
   // Do not preventDefault/stopPropagation: retain the original YouTube link.
   listen(document, 'click', event => { if (hovered(event)) stop(); }, { capture: true });
   listen(document, 'sip-settings-changed', event => { if (event.detail?.restart) stop(); scheduleScan(); });
@@ -454,7 +455,7 @@
     records.clear();
     delete window[KEY];
   } };
-  document.documentElement.dataset.sipVersion = '0.5.2';
+  document.documentElement.dataset.sipVersion = '0.6.0';
   scheduleScan();
 })();
 

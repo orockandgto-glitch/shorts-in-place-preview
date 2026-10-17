@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Preview & Shorts Controls for YouTube",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Inline video previews, preview volume and seeking, and optional Shorts information hiding for YouTube.",
   "minimum_chrome_version": "111",
   "permissions": [

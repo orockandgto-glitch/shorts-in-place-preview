@@ -10,6 +10,7 @@
   let timer = 0;
   let saveTimer = 0;
   let disposed = false;
+  let completedDrag = false;
   const code=navigator.language.toLowerCase();
   const text=code.startsWith('ko')?['미리보기 소리 켜기','미리보기 음소거','미리보기 볼륨','클릭해서 소리를 켜주세요']
     :code.startsWith('ja')?['プレビューの音声を有効にする','プレビューをミュート','プレビュー音量','クリックして音声を有効にしてください']
@@ -23,7 +24,7 @@
     if(related && location.pathname==='/watch' && related.hasAttribute('data-sip-playing') && (root.dataset.pvcRelated==='true' || root.dataset.pvcSeek==='true'))return {anchor:related.parentElement,identity:related,card:related.closest(CARD),kind:'related',audioEnabled:root.dataset.pvcRelated==='true',seekEnabled:root.dataset.pvcSeek==='true'};
     if(location.pathname!=='/')return null;
     const owned = video.closest('.sip-surface[data-sip-context="shorts"]');
-    if (owned && root.dataset.pvcShorts === 'true' && owned.hasAttribute('data-sip-playing')) return {anchor:owned.parentElement,identity:owned,card:owned.closest(CARD),kind:'shorts'};
+    if (owned && (root.dataset.pvcShorts === 'true' || root.dataset.pvcShortsSeek === 'true') && owned.hasAttribute('data-sip-playing')) return {anchor:owned.parentElement,identity:owned,card:owned.closest(CARD),kind:'shorts',audioEnabled:root.dataset.pvcShorts==='true',seekEnabled:root.dataset.pvcShortsSeek==='true'};
     if (video.closest('.sip-surface') || root.dataset.pvcNative !== 'true') return null;
     const preview = video.closest('ytd-video-preview');
     if (!preview) return null;
@@ -53,6 +54,10 @@
   function clear() {
     const s=active; active=null;
     if (!s) return;
+    clearTimeout(s.idleTimer);
+    const drag=s.drag;s.drag=null;
+    if(drag){try{drag.slider.releasePointerCapture(drag.id);}catch{}}
+    root.removeAttribute('data-pvc-dragging');
     // Never restore an audible state on mouseleave: the next hover is muted.
     s.video.dataset.pvcAudio='off';
     s.video.removeAttribute('data-pvc-consent');
@@ -74,7 +79,7 @@
     s.button.setAttribute('aria-label',text[audible?1:0]);
     s.button.setAttribute('aria-pressed',String(audible));
     s.button.title=s.bar.hasAttribute('data-pvc-blocked')?text[3]:text[audible?1:0];
-    if (document.activeElement!==s.slider) s.slider.value=String(Math.round(s.video.volume*100));
+    if (s.drag?.slider!==s.slider) s.slider.value=String(Math.round(s.video.volume*100));
     s.output.textContent=Math.round(s.video.volume*100)+'%';
     s.bar.dataset.pvcMeasuredVolume=String(s.video.volume);
     s.bar.dataset.pvcMeasuredMuted=String(s.video.muted);
@@ -127,6 +132,18 @@
     c.anchor.append(bar);
     if(c.seekEnabled){const seekBar=document.createElement('div');seekBar.className='pvc-timeline';seekBar.dataset.pvcControl='';const seekSlider=document.createElement('input');seekSlider.type='range';seekSlider.min='0';seekSlider.max='1';seekSlider.step='0.1';seekSlider.setAttribute('aria-label',code.startsWith('ko')?'미리보기 재생 위치':code.startsWith('ja')?'プレビュー再生位置':code.startsWith('zh')?'预览播放位置':'Preview playback position');const seekOutput=document.createElement('output');seekOutput.setAttribute('aria-hidden','true');seekBar.append(seekSlider,seekOutput);Object.assign(active,{seekBar,seekSlider,seekOutput});c.anchor.append(seekBar);}
     apply();
+    reveal();
+  }
+  function reveal() {
+    const s=active;if(!s)return;
+    clearTimeout(s.idleTimer);
+    s.bar.removeAttribute('data-pvc-idle');s.seekBar?.removeAttribute('data-pvc-idle');
+    s.idleTimer=setTimeout(()=>{
+      if(active!==s)return;
+      // Never hide a slider mid-drag or a control being operated by keyboard.
+      if(s.drag || [s.bar,s.seekBar].some(el=>el?.querySelector(':focus-visible'))){reveal();return;}
+      s.bar.dataset.pvcIdle='';if(s.seekBar)s.seekBar.dataset.pvcIdle='';
+    },3000);
   }
   function scan() {
     timer=0;
@@ -150,9 +167,11 @@
       [active.card,active.identity,active.bar,active.seekBar].some(part=>part?.contains(node));
   }
   listen(window,'pointerout',event=>{
+    if(active?.drag){event.stopImmediatePropagation();return;}
     if(insidePreview(event.target) && !insidePreview(event.relatedTarget))clear();
   },{capture:true,passive:true});
   listen(window,'pointerover',event=>{
+    if(active?.drag){event.stopImmediatePropagation();return;}
     if(!active || !(event.target instanceof Element) || insidePreview(event.target))return;
     const card=event.target.closest(CARD);
     if(card && card!==active.card)clear();
@@ -162,6 +181,9 @@
   // cleanup. Only our controls are intercepted; all card links keep working.
   function ownControl(element){if(!(element instanceof Element))return false;const control=element.closest('[data-pvc-control]');return !!control && (control===active?.bar || control===active?.seekBar);}
   listen(window,'click',event=>{
+    // A range drag can finish outside its link or remove its own controls.
+    // Consume its trailing click before YouTube can treat it as navigation.
+    if(completedDrag && event.detail!==0){completedDrag=false;event.preventDefault();event.stopImmediatePropagation();return;}
     const control=event.target instanceof Element?event.target.closest('[data-pvc-control]'):null;
     if(!control || !ownControl(event.target))return;
     event.preventDefault();event.stopImmediatePropagation();
@@ -182,23 +204,59 @@
     s.video.play().catch(()=>{});
     render();
   }
-  for(const name of ['pointerdown','pointerup','mousedown','mouseup','dblclick'])listen(window,name,event=>{
-    if(event.target===active?.seekSlider){if(name==='pointerdown')active.scrubbing=true;if(name==='pointerup'){active.scrubbing=false;commitSeek(active);}}
-    if(ownControl(event.target))event.stopImmediatePropagation();
+  function saveVolume(){clearTimeout(saveTimer);saveTimer=setTimeout(()=>chrome.storage.local.set({sipSettings:{...JSON.parse(root.dataset.sipSettings || '{}'),volume}}).catch(()=>{}),150);}
+  function setVolume(value){volume=Math.max(0,Math.min(1,value/100));active.userSound=volume>0;apply(true);saveVolume();}
+  function dragValue(s,event){
+    const slider=s.drag.slider,r=slider.getBoundingClientRect();
+    if(r.width<=0)return;
+    const min=Number(slider.min),max=Number(slider.max),step=Number(slider.step)||1;
+    const value=Math.max(min,Math.min(max,min+Math.round((Math.max(0,Math.min(1,(event.clientX-r.left)/r.width))*(max-min))/step)*step));
+    slider.value=String(value);
+    if(slider===s.slider)setVolume(value);else{s.pendingSeek=value;render();}
+  }
+  function finishDrag(event,cancelled=false){
+    const s=active;if(!s?.drag || s.drag.id!==event.pointerId)return;
+    event.stopImmediatePropagation();
+    const drag=s.drag;if(!cancelled)dragValue(s,event);
+    completedDrag=!cancelled;
+    s.drag=null;s.scrubbing=false;root.removeAttribute('data-pvc-dragging');
+    try{drag.slider.releasePointerCapture(drag.id);}catch{}
+    if(drag.slider===s.seekSlider){if(cancelled)s.pendingSeek=undefined;else commitSeek(s);}
+    reveal();
+    // Pointer capture retargets events to the slider, even outside the card.
+    if(!insidePreview(document.elementFromPoint(event.clientX,event.clientY))){clear();document.dispatchEvent(new Event('pvc-preview-exit'));}
+  }
+  listen(window,'pointerdown',event=>{
+    completedDrag=false;
+    if(!ownControl(event.target))return;
+    event.stopImmediatePropagation();reveal();
+    if(event.button!==0 || event.isPrimary===false)return;
+    const s=active,slider=event.target;
+    if((slider!==s.slider && slider!==s.seekSlider) || slider.disabled)return;
+    event.preventDefault();s.drag={id:event.pointerId,slider};s.scrubbing=slider===s.seekSlider;
+    root.dataset.pvcDragging='';
+    try{slider.setPointerCapture(event.pointerId);}catch{}
+    dragValue(s,event);
   },{capture:true});
+  listen(window,'pointermove',event=>{
+    if(active?.drag){if(active.drag.id===event.pointerId){event.preventDefault();event.stopImmediatePropagation();dragValue(active,event);reveal();}return;}
+    if(insidePreview(event.target))reveal();
+  },{capture:true});
+  listen(window,'pointerup',event=>{if(active?.drag)finishDrag(event);else if(ownControl(event.target))event.stopImmediatePropagation();},{capture:true});
+  listen(window,'pointercancel',event=>finishDrag(event,true),{capture:true});
+  listen(window,'lostpointercapture',event=>{if(active?.drag?.id===event.pointerId)finishDrag(event,true);},{capture:true});
+  for(const name of ['mousedown','mouseup','dblclick'])listen(window,name,event=>{if(ownControl(event.target))event.stopImmediatePropagation();},{capture:true});
   listen(window,'input',event=>{
     if(event.target===active?.seekSlider){event.stopImmediatePropagation();const s=active;s.pendingSeek=Number(event.target.value);clearTimeout(s.seekTimer);if(!s.scrubbing)s.seekTimer=setTimeout(()=>commitSeek(s),120);render();return;}
     if(event.target!==active?.slider)return;
     event.stopImmediatePropagation();
-    volume=Math.max(0,Math.min(1,Number(event.target.value)/100));
-    active.userSound=volume>0;
-    apply(true);
-    clearTimeout(saveTimer);saveTimer=setTimeout(()=>chrome.storage.local.set({sipSettings:{...JSON.parse(root.dataset.sipSettings || '{}'),volume}}).catch(()=>{}),150);
+    setVolume(Number(event.target.value));reveal();
   },{capture:true});
   listen(window,'change',event=>{if(event.target===active?.seekSlider){event.stopImmediatePropagation();active.scrubbing=false;commitSeek(active);}},{capture:true});
   listen(window,'keydown',event=>{
-    if(ownControl(event.target))event.stopImmediatePropagation();
+    if(ownControl(event.target)){event.stopImmediatePropagation();reveal();}
   },{capture:true});
+  listen(window,'focusin',event=>{if(ownControl(event.target))reveal();},{capture:true});
   for(const name of ['playing','loadeddata','emptied','pause','durationchange'])listen(document,name,event=>{if(event.target instanceof HTMLVideoElement)schedule();},{capture:true,passive:true});
   listen(document,'timeupdate',event=>{if(event.target===active?.video)render();},{capture:true,passive:true});
   listen(document,'volumechange',event=>{if(event.target===active?.video)render();},{capture:true,passive:true});
@@ -220,12 +278,12 @@
     let settings={}; try { settings=JSON.parse(root.dataset.sipSettings || '{}'); } catch {}
     enabled=root.dataset.pvcEnabled==='true';
     volume=Number.isFinite(settings.volume)?Math.max(0,Math.min(1,settings.volume)):0.25;
-    const nextKey=root.dataset.pvcNative+'|'+root.dataset.pvcShorts+'|'+root.dataset.pvcRelated+'|'+root.dataset.pvcSeek;
+    const nextKey=root.dataset.pvcNative+'|'+root.dataset.pvcShorts+'|'+root.dataset.pvcShortsSeek+'|'+root.dataset.pvcRelated+'|'+root.dataset.pvcSeek;
     if(nextKey!==featureKey){clear();featureKey=nextKey;}else if(active)apply();
     schedule();
   }
   listen(document,'sip-settings-changed',refreshSettings);
-  root.dataset.pvcVersion='0.5.2';
+  root.dataset.pvcVersion='0.6.0';
   refreshSettings();
   window[KEY]={dispose(){disposed=true;root.dataset.pvcEnabled='false';clear();clearTimeout(timer);clearTimeout(saveTimer);observer.disconnect();events.abort();root.removeAttribute('data-pvc-version');root.removeAttribute('data-pvc-status');delete window[KEY];}};
   schedule();

@@ -13,3 +13,8 @@
 .pvc-bar[data-pvc-context="related"] output{width:24px!important;font-size:9px!important}
 .pvc-timeline{height:14px!important;padding:1px 4px!important;gap:3px!important;border-radius:4px!important;bottom:2px!important}
 .pvc-timeline input{height:12px!important}
+
+/* Keep the video running while inactive controls stop covering the image. */
+[data-pvc-control][data-pvc-idle]{opacity:0!important;pointer-events:none!important}
+[data-pvc-control][data-pvc-idle] *{pointer-events:none!important}
+.pvc-bar input[type=range],.pvc-timeline input[type=range]{touch-action:none!important;user-select:none!important;direction:ltr!important}

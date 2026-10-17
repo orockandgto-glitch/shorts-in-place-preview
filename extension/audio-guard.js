@@ -127,7 +127,10 @@
   }, { signal: events.signal });
   document.addEventListener('pvc-seek-request', event=>{
     const video=event.target;
-    if(!(video instanceof HTMLVideoElement) || location.pathname!=='/watch' || root.dataset.pvcSeek!=='true' || !video.closest('.sip-surface[data-sip-context="related"]'))return;
+    if(!(video instanceof HTMLVideoElement))return;
+    const related=location.pathname==='/watch' && root.dataset.pvcSeek==='true' && video.closest('.sip-surface[data-sip-context="related"]');
+    const shorts=location.pathname==='/' && root.dataset.pvcShortsSeek==='true' && video.closest('.sip-surface[data-sip-context="shorts"]');
+    if(!related && !shorts)return;
     const value=Number(video.dataset.pvcSeekTo);
     if(!Number.isFinite(value) || !Number.isFinite(video.duration) || video.duration<=0)return;
     const target=Math.max(0,Math.min(video.duration-0.05,value));
