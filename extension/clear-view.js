@@ -5,7 +5,7 @@
   const events = new AbortController();
   const records = new Map();
   const root = document.documentElement;
-  root.dataset.scvVersion = '0.6.0';
+  root.dataset.scvVersion = '0.6.2';
   let mode = 'off';
   let frame = 0;
   let disposed = false;

@@ -204,6 +204,45 @@
       }, { signal: s.events.signal });
     }
   }
+  async function startNativePlayer(s) {
+    // Signal-rendered YouTube builds no longer register ytd-video-preview.
+    // Reuse the registered native ytd-player in our own thumbnail surface.
+    await customElements.whenDefined('ytd-player');
+    if (active !== s) return;
+    const host = document.createElement('ytd-player');
+    const player = controller(host);
+    const behavior = player?.ytPlayerBehavior;
+    if (!behavior || typeof behavior.preparePlayer !== 'function' ||
+        typeof behavior.getPlayerPromise !== 'function') {
+      fail(s, 'native-player-behavior-unavailable'); return;
+    }
+    const existing = document.querySelector('ytd-video-preview:not(.sip-surface ytd-video-preview) ytd-player');
+    const context = controller(existing)?.context;
+    player.context = typeof context === 'string' && context.includes('INLINE_PREVIEW')
+      ? context : 'WEB_PLAYER_CONTEXT_CONFIG_ID_KEVLAR_INLINE_PREVIEW';
+    const playerId = 'sip-native-' + (++sequence);
+    player.playerId = playerId;
+    behavior.playerId = playerId;
+    s.component = player;
+    s.record.card.dataset.sipEngine = 'native-player-signal';
+    s.record.card.dataset.sipStage = 'player-requested';
+    s.preview.append(host);
+    behavior.preparePlayer();
+    const api = await behavior.getPlayerPromise();
+    if (active !== s) { api?.cancelPlayback?.(); api?.destroy?.(); return; }
+    s.api = api;
+    s.record.card.dataset.sipStage = 'player-ready';
+    if (typeof api.loadVideoById !== 'function') {
+      fail(s, 'native-video-loader-unavailable'); return;
+    }
+    api.mute?.();
+    api.setInlinePreview?.(true);
+    api.setCenterCrop?.(false);
+    api.setSize?.(s.record.thumbnail.clientWidth, s.record.thumbnail.clientHeight);
+    api.loadVideoById({ videoId: s.record.id, startSeconds: 0 });
+    api.playVideo?.();
+    attachVideo(s);
+  }
   async function start(record) {
     stop();
     if (!inScope(record) || !record.card.isConnected || !record.card.matches(':hover')) return;
@@ -237,6 +276,10 @@
     s.resize.observe(record.thumbnail);
     s.timeout = setTimeout(() => fail(s, 'player-initialization-timeout'), 15000);
     try {
+      if (!customElements.get('ytd-video-preview')) {
+        await startNativePlayer(s);
+        return;
+      }
       await customElements.whenDefined('ytd-video-preview');
       await new Promise(resolve => requestAnimationFrame(resolve));
       if (active !== s) return;
@@ -455,7 +498,7 @@
     records.clear();
     delete window[KEY];
   } };
-  document.documentElement.dataset.sipVersion = '0.6.0';
+  document.documentElement.dataset.sipVersion = '0.6.2';
   scheduleScan();
 })();
 

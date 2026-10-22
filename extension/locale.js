@@ -13,7 +13,7 @@ export const messages={
     "usage": "사용 방법",
     "steps": [
       "썸네일에 마우스를 올리면 무음으로 미리보기가 시작됩니다.",
-      "좌측 상단에서 소리와 음량을 조절하세요. 우측 추천의 하단 슬라이더로 재생 위치를 고를 수 있고, 소리를 켜면 본영상이 잠시 음소거됩니다.",
+      "좌측 상단에서 소리와 음량을 조절하세요. 홈 일반 영상·Shorts·우측 추천의 하단 슬라이더로 구간을 고를 수 있습니다. 우측 추천의 소리를 켜면 본영상이 잠시 음소거됩니다.",
       "커서를 빼면 미리보기가 종료되고 본영상 소리는 이전 상태로 돌아갑니다. 카드 클릭은 정상 이동하며, Shorts 시청 정보는 영상 안에 커서를 두면 표시됩니다."
     ],
     "native": "기능별 사용 여부, 시작 대기 시간과 음량은 위 설정에서 선택하세요. 일반 홈 영상은 YouTube의 기존 미리보기를 사용합니다. 영상 표시 보정은 기본 적용됩니다.",
@@ -53,11 +53,11 @@ export const messages={
     "language": "Language",
     "free": "Free Edge extension",
     "headline": "Control your previews.\nKeep Shorts clear.",
-    "intro": "Play home Shorts and watch-page recommendations inside their thumbnails, adjust preview sound and seek through recommendations. Show Shorts titles and channel information only when needed.",
+    "intro": "Play home Shorts and watch-page recommendations inside their thumbnails. Adjust preview sound and seek through home videos, Shorts and recommendations. Show Shorts information only when needed.",
     "usage": "How to use",
     "steps": [
       "Hover over a thumbnail to start a muted preview.",
-      "Use the top-left sound and volume controls. Seek with the bottom slider on recommendations; enabling preview sound temporarily mutes the main video.",
+      "Use the top-left sound and volume controls. Seek with the bottom slider on home videos, Shorts and recommendations. Enabling recommendation preview sound temporarily mutes the main video.",
       "Leaving ends the preview and restores the main video’s previous audio state. Clicking opens the normal video page. On Shorts pages, information appears while the pointer is over the video."
     ],
     "native": "Choose individual features, hover delay and volume in the settings above. Regular home videos use YouTube’s original preview. Video visibility repair is applied automatically.",
@@ -101,7 +101,7 @@ export const messages={
     "usage": "使い方",
     "steps": [
       "サムネイルにマウスを合わせるとミュートでプレビューが始まります。",
-      "左上で音声と音量を調節します。おすすめ動画の下部スライダーで再生位置を選べます。音声を有効にすると本編が一時ミュートされます。",
+      "左上で音声と音量を調節します。ホーム動画・Shorts・おすすめ動画の下部スライダーで再生位置を選べます。おすすめの音声を有効にすると本編を一時ミュートします。",
       "マウスを離すとプレビューが終了し、本編の音声状態が元に戻ります。クリックすると通常の動画ページへ移動します。Shorts の情報は動画にマウスを合わせると表示されます。"
     ],
     "native": "上の設定で各機能、待機時間、音量を選択できます。ホームの通常動画は YouTube 本来のプレビューを使用します。動画の表示補正は自動で適用されます。",
@@ -145,7 +145,7 @@ export const messages={
     "usage": "使用方法",
     "steps": [
       "鼠标悬停缩略图时，预览以静音开始。",
-      "使用左上角控件调节声音和音量。推荐预览下方的进度条可选择播放位置；开启预览声音会暂时静音主视频。",
+      "使用左上角控件调节声音和音量。首页普通视频、Shorts及推荐预览下方的进度条可选择播放位置；开启推荐预览声音会暂时静音主视频。",
       "鼠标移出后结束预览并恢复主视频之前的声音状态。点击仍正常打开视频页面。Shorts 信息在鼠标位于视频内时显示。"
     ],
     "native": "在上方设置中选择各项功能、悬停等待时间和音量。首页普通视频使用 YouTube 原有预览。视频显示修复自动应用。",
@@ -189,7 +189,7 @@ export const messages={
     "usage": "使用方式",
     "steps": [
       "滑鼠懸停縮圖時，預覽以靜音開始。",
-      "使用左上角控制項調節聲音和音量。推薦預覽下方的進度條可選擇播放位置；開啟預覽聲音會暫時將主影片靜音。",
+      "使用左上角控制項調節聲音和音量。首頁一般影片、Shorts及推薦預覽下方的進度條可選擇播放位置；開啟推薦預覽聲音會暫時將主影片靜音。",
       "滑鼠移出後結束預覽並恢復主影片先前的聲音狀態。點擊仍正常開啟影片頁面。Shorts 資訊在滑鼠位於影片內時顯示。"
     ],
     "native": "在上方設定中選擇各項功能、懸停等待時間和音量。首頁一般影片使用 YouTube 原有預覽。影片顯示修復自動套用。",

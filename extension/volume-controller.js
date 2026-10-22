@@ -25,7 +25,7 @@
     if(location.pathname!=='/')return null;
     const owned = video.closest('.sip-surface[data-sip-context="shorts"]');
     if (owned && (root.dataset.pvcShorts === 'true' || root.dataset.pvcShortsSeek === 'true') && owned.hasAttribute('data-sip-playing')) return {anchor:owned.parentElement,identity:owned,card:owned.closest(CARD),kind:'shorts',audioEnabled:root.dataset.pvcShorts==='true',seekEnabled:root.dataset.pvcShortsSeek==='true'};
-    if (video.closest('.sip-surface') || root.dataset.pvcNative !== 'true') return null;
+    if (video.closest('.sip-surface') || (root.dataset.pvcNative !== 'true' && root.dataset.pvcNativeSeek !== 'true')) return null;
     const preview = video.closest('ytd-video-preview');
     if (!preview) return null;
     const r = preview.getBoundingClientRect();
@@ -42,7 +42,7 @@
         if(new URL(candidate.href,location.origin).searchParams.get('v')===id) {card=candidate.closest(CARD);break;}
       }
     } catch { /* no corresponding visible home card */ }
-    return {anchor:player,identity:preview,card,kind:'native',href:link.getAttribute('href')};
+    return {anchor:player,identity:preview,card,kind:'native',href:link.getAttribute('href'),audioEnabled:root.dataset.pvcNative==='true',seekEnabled:root.dataset.pvcNativeSeek==='true'};
   }
   function mediaKey(video) {
     const owned=video.closest('.sip-surface');
@@ -278,12 +278,12 @@
     let settings={}; try { settings=JSON.parse(root.dataset.sipSettings || '{}'); } catch {}
     enabled=root.dataset.pvcEnabled==='true';
     volume=Number.isFinite(settings.volume)?Math.max(0,Math.min(1,settings.volume)):0.25;
-    const nextKey=root.dataset.pvcNative+'|'+root.dataset.pvcShorts+'|'+root.dataset.pvcShortsSeek+'|'+root.dataset.pvcRelated+'|'+root.dataset.pvcSeek;
+    const nextKey=root.dataset.pvcNative+'|'+root.dataset.pvcNativeSeek+'|'+root.dataset.pvcShorts+'|'+root.dataset.pvcShortsSeek+'|'+root.dataset.pvcRelated+'|'+root.dataset.pvcSeek;
     if(nextKey!==featureKey){clear();featureKey=nextKey;}else if(active)apply();
     schedule();
   }
   listen(document,'sip-settings-changed',refreshSettings);
-  root.dataset.pvcVersion='0.6.0';
+  root.dataset.pvcVersion='0.6.2';
   refreshSettings();
   window[KEY]={dispose(){disposed=true;root.dataset.pvcEnabled='false';clear();clearTimeout(timer);clearTimeout(saveTimer);observer.disconnect();events.abort();root.removeAttribute('data-pvc-version');root.removeAttribute('data-pvc-status');delete window[KEY];}};
   schedule();

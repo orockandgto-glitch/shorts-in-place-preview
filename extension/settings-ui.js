@@ -1,4 +1,4 @@
-const defaults={homeShorts:true,watchRelated:true,homeVolume:true,shortsVolume:true,shortsSeek:true,shortsInfoHidden:true,relatedVolume:true,relatedSeek:true,hoverDelay:375,volume:0.25};
+const defaults={homeShorts:true,watchRelated:true,homeVolume:true,homeSeek:true,shortsVolume:true,shortsSeek:true,shortsInfoHidden:true,relatedVolume:true,relatedSeek:true,hoverDelay:375,volume:0.25};
 const labels={
   ko:['기능 설정','홈 Shorts 전체 미리보기','우측 추천 영상 전체 미리보기','홈 일반 영상 볼륨 조절기','홈 Shorts 볼륨 조절기','미리보기 시작 대기 시간 (ms)','소리를 켤 때 사용할 음량 (%)','새 카드는 항상 무음으로 시작합니다. 좌측 상단 조절기로 소리를 켜세요. 설정은 열린 YouTube 탭에 바로 적용됩니다.','저장됨','저장 실패. 다시 시도해주세요.','Shorts 전체 미리보기를 켜면 사용할 수 있습니다.','설정을 불러오지 못했습니다.'],
   en:['Feature settings','Full home Shorts previews','Full watch-page recommendation previews','Home video volume controls','Home Shorts volume controls','Hover delay (ms)','Volume when enabling sound (%)','Each new card starts muted. Use its top-left controls to enable sound. Changes apply to open YouTube tabs immediately.','Saved','Could not save. Please try again.','Enable full home Shorts previews to use this control.','Could not load settings.'],
@@ -35,6 +35,8 @@ export function settingsSection(language) {
   const seekLabels=seekText[language]||seekText.en;
   const seekRow=document.createElement('label');seekRow.className='setting-row';const seekInput=document.createElement('input');seekInput.type='checkbox';seekInput.name='shortsSeek';seekInput.id='setting-shortsSeek';seekInput.disabled=true;const seekLabel=document.createElement('span');seekLabel.textContent=seekLabels[0];seekRow.append(seekInput,seekLabel);form.append(seekRow);fields.shortsSeek=seekInput;
   const idleNote=document.createElement('p');idleNote.className='small';idleNote.textContent=seekLabels[1];form.append(idleNote);
+  const homeSeekLabels={ko:'홈 일반 영상 미리보기 재생 위치 슬라이더',en:'Home video preview seek slider',ja:'ホーム動画プレビューの再生位置スライダー','zh-CN':'首页普通视频预览进度条','zh-TW':'首頁一般影片預覽進度條'};
+  const homeSeekRow=document.createElement('label');homeSeekRow.className='setting-row';const homeSeekInput=document.createElement('input');homeSeekInput.type='checkbox';homeSeekInput.name='homeSeek';homeSeekInput.id='setting-homeSeek';homeSeekInput.disabled=true;const homeSeekLabel=document.createElement('span');homeSeekLabel.textContent=homeSeekLabels[language]||homeSeekLabels.en;homeSeekRow.append(homeSeekInput,homeSeekLabel);form.append(homeSeekRow);fields.homeSeek=homeSeekInput;
   const note=document.createElement('p');note.textContent=t[7];
   const status=document.createElement('p');status.setAttribute('role','status');status.className='small';
   section.append(form,note,status);

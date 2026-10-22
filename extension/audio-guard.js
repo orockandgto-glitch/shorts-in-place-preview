@@ -130,7 +130,8 @@
     if(!(video instanceof HTMLVideoElement))return;
     const related=location.pathname==='/watch' && root.dataset.pvcSeek==='true' && video.closest('.sip-surface[data-sip-context="related"]');
     const shorts=location.pathname==='/' && root.dataset.pvcShortsSeek==='true' && video.closest('.sip-surface[data-sip-context="shorts"]');
-    if(!related && !shorts)return;
+    const home=location.pathname==='/' && root.dataset.pvcNativeSeek==='true' && video.closest('ytd-video-preview') && !video.closest('.sip-surface');
+    if(!related && !shorts && !home)return;
     const value=Number(video.dataset.pvcSeekTo);
     if(!Number.isFinite(value) || !Number.isFinite(video.duration) || video.duration<=0)return;
     const target=Math.max(0,Math.min(video.duration-0.05,value));
