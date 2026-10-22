@@ -1,6 +1,6 @@
 # Preview more. Click less.
 
-By Lenged · v0.6.0 · October 18, 2026
+By Lenged · v0.6.2 · October 22, 2026
 
 YouTube browsing often starts with a thumbnail. I wanted to watch more before deciding what to open, and to control the sound and playback position of a recommendation without leaving the video already playing. That became **Preview & Shorts Controls for YouTube**, a free desktop extension for Chrome and Edge.
 
@@ -10,7 +10,7 @@ YouTube browsing often starts with a thumbnail. I wanted to watch more before de
 
 1. **Stay on the homepage.** Hold the pointer over a Shorts thumbnail for about 0.4 seconds. The actual Short plays inside that area while you keep hovering. Move away to restore the thumbnail. Click normally to open the Short.
 2. **Listen only when you choose.** Each new preview starts muted. Use the top-left speaker control or volume slider to hear it. On a watch-page recommendation, enabling preview sound temporarily mutes the main video. Leaving the thumbnail restores its previous audio state; the main video keeps playing throughout.
-3. **Find the useful moment.** Home Shorts and related-video previews have a compact bottom seek bar and current/total time. Drag the slider and release to preview another moment. A separate home Shorts seek option is available. Seeking needs a known, finite duration; live and restricted videos are not comprehensively tested.
+3. **Find the useful moment.** Regular home videos, home Shorts and related-video previews have a compact bottom seek bar and current/total time. Drag the slider and release to preview another moment. Separate home video and home Shorts seek options are available. Seeking needs a known, finite duration; live and restricted videos are not comprehensively tested.
 
 An optional setting hides the title and channel information on a Shorts viewing page when the pointer is outside the video. Move the pointer into the video, or focus the metadata with the keyboard, to show it again. Individual features can be switched off from the extension's toolbar icon.
 
@@ -18,7 +18,7 @@ Controls hide after three seconds without pointer movement and return when you m
 
 ## Install the current release
 
-[Download the installable v0.6.0 ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip), extract it into a permanent folder, and open `chrome://extensions` or `edge://extensions`. Enable **Developer mode**, choose **Load unpacked**, and select the folder directly containing `manifest.json`. Refresh YouTube.
+[Download the installable v0.6.2 ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip), extract it into a permanent folder, and open `chrome://extensions` or `edge://extensions`. Enable **Developer mode**, choose **Load unpacked**, and select the folder directly containing `manifest.json`. Refresh YouTube.
 
 If you previously installed the separate Shorts, volume or Clear View extensions from this project, disable those older copies to avoid duplicate controls. The toolbar icon opens the integrated settings.
 
@@ -28,9 +28,9 @@ GitHub installations require manual updates. Download the new extension ZIP, upd
 
 Every feature is free. [Buying Lenged a coffee](https://buymeacoffee.com/lenged) is optional and does not unlock features or guarantee future updates. [Bug reports](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) are useful too: include the browser version, page type and a clear description. Remove private information from screenshots.
 
-The package has been used in Edge, and the author manually tested v0.5.2 Chrome features on October 15, 2026; the v0.6.0 interaction changes were checked in Edge and await a Chrome retest. It depends on YouTube's page and player structure, so site changes can break it. It is not an ad blocker; ads have been observed in previews. Preview playback may affect YouTube history and recommendations. See the [privacy explanation](PRIVACY.md). Source is published for inspection; no open-source reuse license has been selected.
+The package has been used in Edge, and the author manually tested v0.5.2 Chrome features on October 15, 2026; the v0.6.2 interaction changes were checked in Edge and await a Chrome retest. It depends on YouTube's page and player structure, so site changes can break it. It is not an ad blocker; ads have been observed in previews. Preview playback may affect YouTube history and recommendations. See the [privacy explanation](PRIVACY.md). Source is published for inspection; no open-source reuse license has been selected.
 
-[Project home](README.md) · [Release](https://github.com/orockandgto-glitch/shorts-in-place-preview/releases/tag/v0.6.0) · [Official X account](https://x.com/LengedTools)
+[Project home](README.md) · [Release](https://github.com/orockandgto-glitch/shorts-in-place-preview/releases/tag/v0.6.2) · [Official X account](https://x.com/LengedTools)
 
 Independent project. Not affiliated with YouTube, Google or Microsoft.
 
@@ -38,7 +38,7 @@ Independent project. Not affiliated with YouTube, Google or Microsoft.
 
 클릭하기 전에 영상을 조금 더 보고 싶어서 만든 무료 확장입니다. 홈 Shorts 썸네일에 약 0.4초 마우스를 올리면 같은 자리에서 실제 영상이 계속 재생되고, 커서를 빼면 썸네일로 돌아옵니다. 클릭하면 기존처럼 Shorts 페이지로 이동합니다.
 
-새 미리보기는 항상 무음으로 시작합니다. 좌측 상단에서 소리와 음량을 조절하세요. 영상 시청 중 우측 추천 미리보기의 소리를 켜면 본영상은 잠시 음소거되고, 커서를 빼면 이전 소리 상태로 복원됩니다. 홈 Shorts와 우측 추천 모두 하단의 현재·전체 시간과 탐색 바로 원하는 구간을 살펴볼 수 있습니다. 슬라이더를 드래그하고 놓으면 해당 위치로 이동합니다. Shorts 구간 조절은 설정에서 별도로 끌 수 있습니다. 볼륨도 클릭·드래그 모두 지원합니다.
+새 미리보기는 항상 무음으로 시작합니다. 좌측 상단에서 소리와 음량을 조절하세요. 영상 시청 중 우측 추천 미리보기의 소리를 켜면 본영상은 잠시 음소거되고, 커서를 빼면 이전 소리 상태로 복원됩니다. 홈 일반 영상·Shorts·우측 추천 모두 하단의 현재·전체 시간과 탐색 바로 원하는 구간을 살펴볼 수 있습니다. 슬라이더를 드래그하고 놓으면 해당 위치로 이동합니다. 홈 일반 영상과 Shorts 구간 조절은 설정에서 각각 별도로 끌 수 있습니다. 볼륨도 클릭·드래그 모두 지원합니다.
 
 커서가 3초간 멈추면 조절기만 숨겨지고 영상과 소리 상태는 유지됩니다. 썸네일 위에서 다시 움직이면 나타나며, 드래그·키보드 조작 중에는 숨기지 않습니다.
 

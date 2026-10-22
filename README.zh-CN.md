@@ -4,6 +4,10 @@
 
 [English / 한국어](https://github.com/orockandgto-glitch/shorts-in-place-preview) · [日本語](README.ja.md) · [繁體中文](README.zh-TW.md)
 
+## v0.6.2 更新
+
+修复YouTube结构变化导致的首页Shorts预览失效。首页普通视频也新增当前/总时长、进度条及独立设置。保留静止3秒隐藏、移动显示控件的行为。已在Edge确认，新版本Chrome仍待单独复测。
+
 ## 主要功能
 
 - 音量支持点击和拖动。鼠标静止3秒后只隐藏控件，移动时重新显示，播放和声音状态继续保留。首页Shorts新增当前/总时长和进度条，松开拖动后跳转，可在设置中单独关闭。
@@ -14,9 +18,9 @@
 - 可选的Shorts标题/频道信息自动隐藏：鼠标进入视频时显示，离开时隐藏。
 - 在扩展设置中分别开关功能、调整悬停延迟及音量。普通首页视频保留YouTube原生预览，点击卡片仍正常进入视频页面。
 
-## 手动安装v0.6.0
+## 手动安装v0.6.2
 
-1. 下载[安装ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip)，解压到固定文件夹。
+1. 下载[安装ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip)，解压到固定文件夹。
 2. Chrome打开 `chrome://extensions`；Edge打开 `edge://extensions`，启用“开发者模式”。
 3. 点击“加载已解压的扩展程序”，选择直接包含 `manifest.json` 的文件夹。
 4. 若安装过旧的独立版本（Shorts In-place Preview、Preview Volume Control、Shorts Clear View），先停用，避免重复运行。

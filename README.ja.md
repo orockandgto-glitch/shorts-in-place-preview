@@ -4,6 +4,10 @@ Lengedが制作する、PC版Chrome・Microsoft Edge向けの無料拡張機能�
 
 [English / 한국어](https://github.com/orockandgto-glitch/shorts-in-place-preview) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
 
+## v0.6.2 の変更
+
+YouTubeの構造変更で停止したホームShortsプレビューを復旧しました。ホームの通常動画にも現在時間・合計時間付きのシークバーと個別設定を追加しました。3秒間の操作なしで非表示、移動時に再表示する動作は維持します。Edgeで確認済みで、Chromeの新バージョンは追加確認が必要です。
+
 ## できること
 
 - 音量はクリックとドラッグの両方に対応します。3秒間マウスを動かさないと操作部だけが隠れ、動かすと再表示します。再生と音声状態は維持します。ホームShortsにも現在・合計時間付きのシークバーを追加し、ドラッグを離した時に移動します。設定で個別に無効化できます。
@@ -14,9 +18,9 @@ Lengedが制作する、PC版Chrome・Microsoft Edge向けの無料拡張機能�
 - Shorts視聴画面のタイトル・チャンネル情報を自動で隠すオプションがあります。動画にカーソルを置くと表示され、外すと隠れます。
 - 各機能のオン・オフ、ホバー待ち時間、音量を設定できます。通常のホーム動画にはYouTube本来のプレビューを使い、クリック時の通常のページ移動も維持します。
 
-## 手動インストール（v0.6.0）
+## 手動インストール（v0.6.2）
 
-1. [インストール用ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip)をダウンロードして、移動・削除しないフォルダーに展開します。
+1. [インストール用ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip)をダウンロードして、移動・削除しないフォルダーに展開します。
 2. Chromeは `chrome://extensions`、Edgeは `edge://extensions` を開き、デベロッパーモードを有効にします。
 3. 「パッケージ化されていない拡張機能を読み込む」を選び、`manifest.json` が直接入っているフォルダーを指定します。
 4. 古い個別版（Shorts In-place Preview / Preview Volume Control / Shorts Clear View）がある場合は無効にして、重複実行を避けます。

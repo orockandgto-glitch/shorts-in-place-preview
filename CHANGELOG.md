@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.2 — 2026-10-22
+
+- Added seeking with current/total time to regular home-video previews, using YouTube's existing native preview player. Separate Home video preview seek slider option, enabled by default and independent of volume.
+- Retained drag-on-release seeking, audio choice and 3-second idle hiding on home videos, Shorts and related previews. Finite duration required.
+- Includes the 0.6.1 compatibility fix below. All features remain free; no additional permissions or developer telemetry.
+- User confirmed actual Edge Shorts playback and controls after reloading 0.6.1, then confirmed the 0.6.2 home video seek addition. Local controller/media/settings/initialization regression and syntax checks passed. Chrome 0.6.2 awaits a separate retest.
+
+## 0.6.1 — 2026-10-22
+
+- Fixed home Shorts initialization after YouTube changed its signal-rendered preview: ytd-video-preview is no longer registered as a custom element on the observed build.
+- When that registration is absent, initialize a private, uniquely identified native ytd-player inside the same thumbnail and reuse YouTube's inline preview context. Preserve the existing CoW/Polymer paths for older builds.
+- Mute before loading; preserve inline sizing, full video playback and cleanup on leave, including cancellation during delayed initialization. No iframe, external window or floating player.
+
+
 ## 0.6.0 — 2026-10-18
 
 - Fixed volume dragging on home video, Shorts and related-video previews using pointer capture and explicit drag tracking. Drag boundary events no longer revoke audio consent; releasing outside ends the preview.

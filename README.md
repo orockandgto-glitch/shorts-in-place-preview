@@ -2,7 +2,7 @@
 
 **Try it free / 무료로 써보기 — Chrome & Edge desktop**
 
-[**Download extension ZIP · 설치 파일 받기 (v0.6.0)**](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip) · [19-second real demo / 실제 시연](https://x.com/LengedTools/status/2110974712088273407)
+[**Download extension ZIP · 설치 파일 받기 (v0.6.2)**](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip) · [19-second real demo / 실제 시연](https://x.com/LengedTools/status/2110974712088273407)
 
 1. Download the ZIP and extract it. / ZIP을 받고 압축을 풉니다.
 2. Open `chrome://extensions` or `edge://extensions` → **Developer mode / 개발자 모드** → **Load unpacked / 압축 해제된 확장 로드**.
@@ -17,7 +17,7 @@
 
 Free browser extension by **Lenged**. Preview videos in place, control their sound and playback position, and keep Shorts information out of the way.
 
-[Download v0.6.0](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.0.zip) · [Release history](https://github.com/orockandgto-glitch/shorts-in-place-preview/releases) · [Report a bug](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [Buy Lenged a coffee](https://buymeacoffee.com/lenged)
+[Download v0.6.2](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip) · [Release history](https://github.com/orockandgto-glitch/shorts-in-place-preview/releases) · [Report a bug](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [Buy Lenged a coffee](https://buymeacoffee.com/lenged)
 
 **Preview more. Click less.** Hover over a home Shorts thumbnail to keep watching in place. Turn preview sound on when you want it. On a watch page, jump to a different moment in a related-video preview, then return to your main video with its audio restored.
 
@@ -37,7 +37,13 @@ The 19-second video includes actual home Shorts preview footage and text install
 
 This short animation illustrates hover playback, preview volume, recommendation seeking and optional Shorts information hiding. It uses simulated UI and original sample visuals, not a screen recording. 기능 시연 애니메이션이며 실제 화면 녹화가 아닙니다.
 
-## New in v0.6.0 / 이번 업데이트
+## New in v0.6.2 / 이번 업데이트
+
+- **Shorts previews restored after YouTube’s player change.** Reuses a private YouTube native player within the same thumbnail. / YouTube 구조 변경으로 멈춘 홈 Shorts 미리보기 복구.
+- **Seek in regular home-video previews too.** Current/total time, draggable seek bar and an independent setting. / 홈 일반 영상에도 하단 구간 조절과 현재·전체 시간 추가.
+- Retains volume dragging and 3-second idle controls from v0.6.0. / 볼륨 드래그·3초 조절기 자동 숨김 유지.
+
+### Included controls / 함께 제공되는 조절 기능
 
 - **Drag volume smoothly** on home video, Shorts and recommendation previews without the drag being mistaken for leaving the thumbnail. / 볼륨 드래그 중 미리보기 종료·음소거되는 문제 수정.
 - **Controls disappear after 3 seconds** without pointer movement and return when you move over the preview. Playback and your audio choice continue. Controls stay visible during dragging or keyboard use. / 3초 정지 시 조절기만 숨김, 움직이면 복원.
@@ -50,7 +56,7 @@ This short animation illustrates hover playback, preview volume, recommendation 
 - Full home Shorts and watch-page recommendation previews inside existing thumbnails. No separate playback window or floating player.
 - Top-left mute and draggable volume controls for home video, home Shorts and recommendation previews. Each new card starts muted.
 - Enabling recommendation preview sound temporarily mutes the main video. Leaving or muting the preview restores the main video's previous mute and volume state; the main video keeps playing.
-- A bottom seek slider with current and total time on home Shorts and watch-page recommendation previews. Seeking preserves the selected audio state during buffering. Unknown or infinite durations cannot be scrubbed.
+- A bottom seek slider with current and total time on regular home videos, home Shorts and watch-page recommendation previews. Seeking preserves the selected audio state during buffering. Unknown or infinite durations cannot be scrubbed.
 - Optional title/channel auto-hide on Shorts viewing pages: hover over the video to reveal information, move away to hide it. Keyboard focus on metadata also reveals it. No extra Info button.
 - Individual feature switches, hover delay and saved volume. Native home-preview visibility repair is applied automatically.
 
@@ -58,8 +64,8 @@ This short animation illustrates hover playback, preview volume, recommendation 
 
 | Browser | Status |
 | --- | --- |
-| Microsoft Edge desktop | v0.6.0: author/user confirmed drag, idle controls and Shorts seeking; agent observed continuous Shorts playback with hidden controls on 2026-10-18 |
-| Google Chrome desktop | v0.5.2 manually tested by the author on 2026-10-15; v0.6.0 changes await a separate Chrome retest |
+| Microsoft Edge desktop | v0.6.2: actual Edge home seeking confirmed by author/user on 2026-10-22; v0.6.1 Shorts recovery confirmed after reload |
+| Google Chrome desktop | v0.5.2 manually tested by the author on 2026-10-15; v0.6.2 changes await a separate Chrome retest |
 | Whale desktop | Chromium compatibility is expected, but not yet tested |
 | Firefox / Safari | Not supported by this package; porting and testing are required |
 
@@ -69,7 +75,7 @@ The Edge store update is being prepared; a public store listing has not been ver
 
 ## Install manually on Edge or Chrome
 
-1. Download the **v0.6.0 ZIP** above and extract it into a permanent folder. Select the folder that directly contains `manifest.json` when loading.
+1. Download the **v0.6.2 ZIP** above and extract it into a permanent folder. Select the folder that directly contains `manifest.json` when loading.
 2. Open `edge://extensions` (Edge) or `chrome://extensions` (Chrome) and enable **Developer mode**.
 3. Choose **Load unpacked** and select that extracted folder.
 4. Disable older separate copies of Shorts In-place Preview, Preview Volume Control and Shorts Clear View to avoid duplicate controls.
@@ -103,7 +109,7 @@ Independent project; not affiliated with YouTube, Google, Microsoft, Naver or Ap
 
 ### 설치
 
-1. 위의 **Download v0.6.0**에서 ZIP을 받아 고정된 폴더에 압축을 풉니다.
+1. 위의 **Download v0.6.2**에서 ZIP을 받아 고정된 폴더에 압축을 풉니다.
 2. Edge에서 `edge://extensions` → **개발자 모드** → **압축 해제된 확장 로드**를 선택합니다.
 3. `manifest.json`이 바로 들어 있는 폴더를 선택하고 YouTube를 새로고침합니다.
 4. 기존 개별 재생·볼륨·정보 숨김 확장은 잠시 꺼서 중복 실행을 막습니다.
@@ -111,7 +117,7 @@ Independent project; not affiliated with YouTube, Google, Microsoft, Naver or Ap
 
 소스를 통째로 받았다면 저장소 최상위가 아닌 **extension 폴더**를 선택하세요. GitHub 수동 설치는 자동 업데이트되지 않습니다. 새 ZIP을 설치 폴더에 반영한 뒤 확장과 YouTube를 새로고침하세요.
 
-현재 **Edge 실제 사용 확인 완료**, **Chrome은 2026-10-15 개발자 직접 사용 테스트에서 전체 기능 정상 동작을 확인**했습니다. Chrome 페이지에서도 0.5.2 실행·준비 완료 상태와 Shorts 카드 10개 인식을 확인했습니다. 이번 0.6.0 변경 사항은 Edge에서 확인했으며 Chrome에서는 추가 확인이 필요합니다. 웨일은 호환 예상 단계이며 실제 테스트 전입니다. Firefox·Safari는 별도 이식이 필요합니다. YouTube 변경으로 작동이 중단될 수 있고 모든 광고·라이브·제한 콘텐츠를 검증한 것은 아닙니다.
+현재 **Edge 실제 사용 확인 완료**, **Chrome은 2026-10-15 개발자 직접 사용 테스트에서 전체 기능 정상 동작을 확인**했습니다. Chrome 페이지에서도 0.5.2 실행·준비 완료 상태와 Shorts 카드 10개 인식을 확인했습니다. 이번 0.6.2 변경 사항은 Edge에서 확인했으며 Chrome에서는 추가 확인이 필요합니다. 웨일은 호환 예상 단계이며 실제 테스트 전입니다. Firefox·Safari는 별도 이식이 필요합니다. YouTube 변경으로 작동이 중단될 수 있고 모든 광고·라이브·제한 콘텐츠를 검증한 것은 아닙니다.
 
 Chrome에서는 `chrome://extensions`에서 개발자 모드를 켜고 같은 **extension 폴더**를 압축 해제된 확장으로 로드하면 됩니다. Chrome 웹 스토어 등록은 별도이며 현재 GitHub 수동 설치를 제공합니다.
 
