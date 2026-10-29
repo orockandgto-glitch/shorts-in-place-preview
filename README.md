@@ -2,13 +2,15 @@
 
 **Try it free / 무료로 써보기 — Chrome & Edge desktop**
 
-[**Download extension ZIP · 설치 파일 받기 (v0.6.2)**](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip) · [19-second real demo / 실제 시연](https://x.com/LengedTools/status/2110974712088273407)
+[**Install from Chrome Web Store / Chrome에 설치**](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [**Install from Microsoft Edge Add-ons / Edge에 설치**](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
 
-1. Download the ZIP and extract it. / ZIP을 받고 압축을 풉니다.
-2. Open `chrome://extensions` or `edge://extensions` → **Developer mode / 개발자 모드** → **Load unpacked / 압축 해제된 확장 로드**.
-3. Select the extracted folder containing `manifest.json`, refresh YouTube, and hover over a home Shorts card. / `manifest.json`이 바로 있는 폴더 선택 → YouTube 새로고침 → 홈 Shorts에 마우스를 올리세요.
+1. Open the store for your browser and add the extension. / 사용하는 브라우저의 스토어에서 확장을 추가하세요.
+2. Refresh YouTube. / YouTube를 새로고침하세요.
+3. Hover over a home Shorts card; use the preview controls for sound and seeking. / 홈 Shorts에 마우스를 올리고 소리·구간 조절을 사용하세요.
 
-**Manual installation is required.** All features are free; donations are optional. / 현재 수동 설치가 필요하며, 모든 기능은 후원 없이 무료입니다. [Need help installing? / 설치가 막혔나요?](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)
+**Now available in both official stores (2026-10-29).** All features are free; donations are optional. / **Chrome·Edge 공식 스토어 등록 완료.** 모든 기능은 후원 없이 무료입니다. [Need help? / 사용이 막혔나요?](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)
+
+[Manual-install ZIP (v0.6.2)](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip) · [19-second real demo / 실제 시연](https://x.com/LengedTools/status/2110974712088273407)
 
 
 **Languages / 言語 / 语言:** English · 한국어 · [日本語](README.ja.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md)
@@ -21,13 +23,13 @@ Free browser extension by **Lenged**. Preview videos in place, control their sou
 
 **Preview more. Click less.** Hover over a home Shorts thumbnail to keep watching in place. Turn preview sound on when you want it. On a watch page, jump to a different moment in a related-video preview, then return to your main video with its audio restored.
 
-All features are free. No account for this extension and no paid feature unlocks. Current distribution is a GitHub ZIP with manual installation; Chrome Web Store availability has not been announced.
+All features are free. No account for this extension and no paid feature unlocks. Available from the Chrome Web Store and Microsoft Edge Add-ons. A GitHub ZIP remains available for optional manual installation.
 
 [How to use it / 사용 안내](USER-GUIDE.md) · [Official updates on X](https://x.com/LengedTools)
 
 ## Start here / 처음 오셨나요?
 
-**[Install on Chrome or Edge](#install-manually-on-edge-or-chrome)** · **[Actual Edge capture + setup video](https://x.com/LengedTools/status/2110974712088273407)** · **[Share first-use feedback / 사용 후기](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)**
+**[Install on Chrome or Edge](#install-from-the-official-stores)** · **[Actual Edge capture + setup video](https://x.com/LengedTools/status/2110974712088273407)** · **[Share first-use feedback / 사용 후기](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues/1)**
 
 The 19-second video includes actual home Shorts preview footage and text installation instructions. The pinned feedback thread asks about setup clarity and control size. 모든 기능은 무료입니다. 설치가 막힌 곳이나 조절기 사용감을 알려주세요.
 
@@ -71,7 +73,13 @@ This short animation illustrates hover playback, preview volume, recommendation 
 
 The extension depends on YouTube's internal player and page structure, which can change without notice. Ads have been observed during previews, but ads, live and restricted content are not comprehensively tested. Preview playback may affect YouTube watch history or recommendations. This is not an ad blocker.
 
-The Edge store update is being prepared; a public store listing has not been verified. GitHub download availability does not imply store approval.
+## Install from the official stores
+
+[Chrome Web Store](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
+
+Add the extension from your browser's store, then refresh YouTube. No developer mode or ZIP extraction is needed for store installation. Store versions may differ from the GitHub ZIP; check the version shown in your chosen store.
+
+If switching from a manual copy, disable the old copy before enabling the store version to avoid duplicate controls. Store-installed copies receive updates through their respective stores.
 
 ## Install manually on Edge or Chrome
 
@@ -83,7 +91,7 @@ The Edge store update is being prepared; a public store listing has not been ver
 
 For a source checkout, select the repository's **extension** folder instead of the repository root. The automatically generated GitHub “Source code” ZIP and the installable extension ZIP have different folder layouts.
 
-Manual installations do not automatically update from GitHub. Download a newer extension ZIP into the same installation folder, reload the extension and refresh YouTube. Keep backups when testing a new version. Store-managed updates will use their store's update flow when available.
+Manual installations do not automatically update from GitHub. Download a newer extension ZIP into the same installation folder, reload the extension and refresh YouTube. Keep backups when testing a new version. Store-installed copies update through their respective stores.
 
 ## Support and funding
 
@@ -109,20 +117,20 @@ Independent project; not affiliated with YouTube, Google, Microsoft, Naver or Ap
 
 ### 설치
 
-1. 위의 **Download v0.6.2**에서 ZIP을 받아 고정된 폴더에 압축을 풉니다.
-2. Edge에서 `edge://extensions` → **개발자 모드** → **압축 해제된 확장 로드**를 선택합니다.
-3. `manifest.json`이 바로 들어 있는 폴더를 선택하고 YouTube를 새로고침합니다.
-4. 기존 개별 재생·볼륨·정보 숨김 확장은 잠시 꺼서 중복 실행을 막습니다.
-5. 확장 아이콘을 누르면 옵션·설명·후원 안내를 볼 수 있습니다.
+1. [Chrome 웹 스토어](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) 또는 [Edge 추가 기능 스토어](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)에서 확장을 추가하세요.
+2. 기존에 수동 설치한 같은 확장이 있다면 꺼서 중복 실행을 막으세요.
+3. YouTube를 새로고침한 뒤 홈 Shorts 썸네일에 마우스를 올려보세요.
+4. 확장 아이콘을 누르면 옵션·설명·후원 안내를 볼 수 있습니다.
 
-소스를 통째로 받았다면 저장소 최상위가 아닌 **extension 폴더**를 선택하세요. GitHub 수동 설치는 자동 업데이트되지 않습니다. 새 ZIP을 설치 폴더에 반영한 뒤 확장과 YouTube를 새로고침하세요.
+스토어 설치에는 개발자 모드나 ZIP 압축 해제가 필요하지 않습니다. 스토어별 배포 버전은 해당 페이지에서 확인하세요. 수동 설치가 필요한 경우 위의 별도 안내를 이용할 수 있으며, GitHub 수동 설치는 자동 업데이트되지 않습니다.
 
 현재 **Edge 실제 사용 확인 완료**, **Chrome은 2026-10-15 개발자 직접 사용 테스트에서 전체 기능 정상 동작을 확인**했습니다. Chrome 페이지에서도 0.5.2 실행·준비 완료 상태와 Shorts 카드 10개 인식을 확인했습니다. 이번 0.6.2 변경 사항은 Edge에서 확인했으며 Chrome에서는 추가 확인이 필요합니다. 웨일은 호환 예상 단계이며 실제 테스트 전입니다. Firefox·Safari는 별도 이식이 필요합니다. YouTube 변경으로 작동이 중단될 수 있고 모든 광고·라이브·제한 콘텐츠를 검증한 것은 아닙니다.
 
-Chrome에서는 `chrome://extensions`에서 개발자 모드를 켜고 같은 **extension 폴더**를 압축 해제된 확장으로 로드하면 됩니다. Chrome 웹 스토어 등록은 별도이며 현재 GitHub 수동 설치를 제공합니다.
+Chrome·Edge 공식 스토어에서 설치할 수 있습니다. 스토어 등록은 별도의 최신 Chrome 기능 재검증을 뜻하지 않으며, 위 테스트 이력은 그대로 적용됩니다.
 
 [버그 신고](https://github.com/orockandgto-glitch/shorts-in-place-preview/issues) · [개인정보처리방침](PRIVACY.md) · [선택적 개발 후원](https://buymeacoffee.com/lenged)
 
 소스는 확인할 수 있도록 공개했으며 재사용·재배포를 위한 오픈소스 라이선스는 아직 정하지 않았습니다. 후원은 추가 기능 구매나 지속적 업데이트 보장이 아닙니다.
+
 
 
