@@ -18,6 +18,12 @@
 - 可選擇自動隱藏Shorts觀看畫面的標題與頻道資訊，游標進入影片時顯示，移開時隱藏。
 - 各項功能、停留等待時間及音量可在設定中調整。一般首頁影片使用YouTube原生預覽；點擊縮圖仍正常進入影片頁面。
 
+## 從官方商店安裝（2026-10-29）
+
+[Chrome 線上應用程式商店](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [Microsoft Edge 附加元件](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
+
+在對應瀏覽器的商店新增擴充功能，再重新整理YouTube。不需要開發人員模式或解壓縮ZIP。從手動版本切換時，請先停用舊副本，避免重複執行。各商店版本以頁面顯示為準，商店版透過對應商店更新。
+
 ## 手動安裝v0.6.2
 
 1. 下載[安裝ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip)，解壓縮至固定資料夾。
@@ -34,7 +40,7 @@
 
 Edge電腦版已實際使用；作者於2026年10月15日手動測試Chrome並回報所有功能正常。目前套件不支援Firefox、Safari或手機版YouTube，Whale尚未驗證。需要能正常使用YouTube電腦版網站的環境。
 
-功能依賴YouTube內部播放器與網頁結構，網站更新或其他擴充功能可能影響相容性。這不是廣告阻擋工具。曾確認預覽中出現廣告，但未完整驗證廣告、直播與受限內容。預覽可能影響YouTube觀看紀錄與推薦。尚未確認商店公開審核通過，目前提供GitHub手動安裝。
+功能依賴YouTube內部播放器與網頁結構，網站更新或其他擴充功能可能影響相容性。這不是廣告阻擋工具。曾確認預覽中出現廣告，但未完整驗證廣告、直播與受限內容。預覽可能影響YouTube觀看紀錄與推薦。現已在Chrome與Edge官方商店公開，可透過上方連結安裝。
 
 ## 回饋與隱私
 
@@ -48,3 +54,4 @@ Edge電腦版已實際使用；作者於2026年10月15日手動測試Chrome並�
 
 
 v0.6.0變更已於2026年10月18日在Edge確認。Chrome先前測試的是v0.5.2，新互動仍待另外複測。
+
