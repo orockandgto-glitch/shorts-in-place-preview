@@ -18,6 +18,12 @@ YouTubeの構造変更で停止したホームShortsプレビューを復旧し�
 - Shorts視聴画面のタイトル・チャンネル情報を自動で隠すオプションがあります。動画にカーソルを置くと表示され、外すと隠れます。
 - 各機能のオン・オフ、ホバー待ち時間、音量を設定できます。通常のホーム動画にはYouTube本来のプレビューを使い、クリック時の通常のページ移動も維持します。
 
+## 公式ストアからインストール（2026-10-29）
+
+[Chrome ウェブストア](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [Microsoft Edge アドオン](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
+
+ブラウザーに合ったストアで追加し、YouTubeを再読み込みしてください。デベロッパーモードやZIPの展開は不要です。手動版から切り替える場合は、古いコピーを無効にして重複を避けてください。各ストアのバージョンは掲載ページで確認できます。ストア版は各ストア経由で更新されます。
+
 ## 手動インストール（v0.6.2）
 
 1. [インストール用ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip)をダウンロードして、移動・削除しないフォルダーに展開します。
@@ -34,7 +40,7 @@ GitHubの「Source code」ZIPを使う場合は、リポジトリ最上位では
 
 PC版Edgeで実際に使用し、Chromeは2026年10月15日に作者が手動テストして全機能の動作を確認しました。Firefox・Safariはこのパッケージでは未対応です。Whaleは未検証です。スマートフォン版YouTubeには対応しません。
 
-YouTube内部のプレーヤーとページ構造に依存します。YouTubeの変更や他の拡張機能によって動作しなくなることがあります。広告ブロッカーではありません。広告表示は確認していますが、広告・ライブ・制限付きコンテンツを網羅的には検証していません。プレビューがYouTubeの再生履歴やおすすめに影響する可能性があります。ストアでの公開承認は確認しておらず、現在の案内はGitHubによる手動インストールです。
+YouTube内部のプレーヤーとページ構造に依存します。YouTubeの変更や他の拡張機能によって動作しなくなることがあります。広告ブロッカーではありません。広告表示は確認していますが、広告・ライブ・制限付きコンテンツを網羅的には検証していません。プレビューがYouTubeの再生履歴やおすすめに影響する可能性があります。Chrome・Edge公式ストアで公開されています。上のリンクからインストールできます。
 
 ## フィードバック・プライバシー
 
@@ -48,3 +54,4 @@ YouTube・Google・Microsoftとは提携していない独立したプロジェ�
 
 
 v0.6.0の変更は2026年10月18日にEdgeで動作確認しました。Chromeでの確認はv0.5.2時点で、新しい操作変更は追加テストが必要です。
+
