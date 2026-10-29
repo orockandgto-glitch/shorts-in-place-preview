@@ -16,13 +16,19 @@ An optional setting hides the title and channel information on a Shorts viewing 
 
 Controls hide after three seconds without pointer movement and return when you move within the preview. Playback and your selected sound continue. Dragging or keyboard focus keeps the controls visible. Volume sliders support both click and drag.
 
-## Install the current release
+## Install from the official stores (2026-10-29)
+
+[Chrome Web Store](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
+
+Add the extension from the store for your browser and refresh YouTube. No developer mode or ZIP extraction is needed. If switching from a manual copy, disable that older copy to avoid duplicate controls. Store versions may differ from the GitHub ZIP; check the version shown in each store. Store-installed copies receive updates through their respective stores.
+
+## Optional manual installation
 
 [Download the installable v0.6.2 ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip), extract it into a permanent folder, and open `chrome://extensions` or `edge://extensions`. Enable **Developer mode**, choose **Load unpacked**, and select the folder directly containing `manifest.json`. Refresh YouTube.
 
 If you previously installed the separate Shorts, volume or Clear View extensions from this project, disable those older copies to avoid duplicate controls. The toolbar icon opens the integrated settings.
 
-GitHub installations require manual updates. Download the new extension ZIP, update the installation folder, reload the extension, and refresh YouTube. This GitHub download is not a Chrome Web Store listing or evidence of store approval.
+GitHub installations require manual updates. Download the new extension ZIP, update the installation folder, reload the extension, and refresh YouTube. For normal installation, use one of the official store links above.
 
 ## Free, with optional support
 
@@ -44,6 +50,9 @@ Independent project. Not affiliated with YouTube, Google or Microsoft.
 
 Shorts 시청 화면의 제목·채널 자동 숨김은 옵션입니다. 커서가 영상 안으로 들어오거나 정보에 키보드 초점이 있으면 다시 표시됩니다. 확장 아이콘에서 각 기능을 켜고 끌 수 있습니다.
 
-위 ZIP을 내려받아 고정된 폴더에 압축을 풀고, `chrome://extensions` 또는 `edge://extensions`에서 **개발자 모드 → 압축 해제된 확장 로드**를 선택하세요. `manifest.json`이 바로 들어 있는 폴더를 지정한 뒤 YouTube를 새로고침하면 됩니다. 이전에 설치한 같은 프로젝트의 개별 확장은 꺼주세요. GitHub 수동 설치는 자동 업데이트되지 않습니다.
+[Chrome 웹 스토어](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) 또는 [Edge 추가 기능 스토어](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)에서 확장을 추가하고 YouTube를 새로고침하세요. 스토어 설치에는 개발자 모드가 필요하지 않습니다. 기존 수동 설치본이 있다면 먼저 꺼서 중복 실행을 막으세요.
+
+수동 설치를 선택하는 경우에만 위 ZIP을 내려받아 고정된 폴더에 압축을 풀고, `chrome://extensions` 또는 `edge://extensions`에서 **개발자 모드 → 압축 해제된 확장 로드**를 선택하세요. `manifest.json`이 바로 들어 있는 폴더를 지정한 뒤 YouTube를 새로고침하면 됩니다. 이전에 설치한 같은 프로젝트의 개별 확장은 꺼주세요. GitHub 수동 설치는 자동 업데이트되지 않습니다.
 
 모든 기능은 무료이며 [후원](https://buymeacoffee.com/lenged)은 선택입니다. YouTube 구조 변경으로 오류가 생길 수 있으며 광고 차단 도구가 아닙니다. 미리보기 재생이 YouTube 시청 기록·추천에 영향을 줄 수 있습니다. Firefox·Safari는 이 패키지로 지원하지 않습니다.
+
