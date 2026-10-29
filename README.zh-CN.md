@@ -18,6 +18,12 @@
 - 可选的Shorts标题/频道信息自动隐藏：鼠标进入视频时显示，离开时隐藏。
 - 在扩展设置中分别开关功能、调整悬停延迟及音量。普通首页视频保留YouTube原生预览，点击卡片仍正常进入视频页面。
 
+## 从官方商店安装（2026-10-29）
+
+[Chrome 应用商店](https://chromewebstore.google.com/detail/preview-shorts-controls-f/lcmohagmlkmnnpefcnbocfmpnaahpbik) · [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/preview-shorts-controls/ifiankpahnbcolbcfaohlfapbplghgdk)
+
+在对应浏览器的商店添加扩展，再刷新YouTube。无需开发者模式或解压ZIP。若从手动版本切换，请先停用旧副本，避免重复运行。各商店版本以页面显示为准，商店版通过相应商店更新。
+
 ## 手动安装v0.6.2
 
 1. 下载[安装ZIP](https://github.com/orockandgto-glitch/shorts-in-place-preview/raw/main/Preview-Shorts-Controls-0.6.2.zip)，解压到固定文件夹。
@@ -34,7 +40,7 @@
 
 Edge电脑端已实际使用；作者于2026年10月15日在Chrome中手动测试并报告全部功能正常。当前安装包不支持Firefox、Safari或手机端YouTube；Whale尚未验证。需要能正常访问YouTube电脑网页版的环境。
 
-扩展依赖YouTube内部播放器及页面结构，网站更新或其他扩展可能影响兼容性。它不是广告拦截工具。曾观察到预览中的广告，但没有全面验证广告、直播和受限内容。预览可能影响YouTube观看记录与推荐。尚未确认商店公开审核通过，当前提供GitHub手动安装。
+扩展依赖YouTube内部播放器及页面结构，网站更新或其他扩展可能影响兼容性。它不是广告拦截工具。曾观察到预览中的广告，但没有全面验证广告、直播和受限内容。预览可能影响YouTube观看记录与推荐。现已在Chrome和Edge官方商店公开，可通过上方链接安装。
 
 ## 反馈与隐私
 
@@ -48,3 +54,4 @@ Edge电脑端已实际使用；作者于2026年10月15日在Chrome中手动测�
 
 
 v0.6.0改动已于2026年10月18日在Edge确认。Chrome此前测试的是v0.5.2，新交互仍待单独复测。
+
